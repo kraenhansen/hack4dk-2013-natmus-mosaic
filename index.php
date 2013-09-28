@@ -1,5 +1,4 @@
 <?php
-require_once('./lib/CIPManager.php');
 const SERVER = 'http://samlinger.natmus.dk/';
 
 if(array_key_exists('q', $_GET) && $_GET['q'] != '') {
@@ -279,7 +278,7 @@ function printImages($maxreturned = 10, $startindex = 0) {
 	</head>
 
 	<body>
-		<h1><a href="http://hack4dk.wordpress.com/" target="_blank">#HACK4DK</a> - Natmus Mosaic</h1>
+		<h1><a href="http://hack4dk.wordpress.com/" target="_blank">#HACK4DK</a> - <a href="https://docs.google.com/presentation/d/1e77aApiTgVeWFSJJQp1f6lBk53mchY8LhLQ6pa1CWeM/view" target="_blank">Natmus Mosaic</a></h1>
 		<form id="search">
 			<input type="text" placeholder="Søg" name="q" autocomplete="off" value="<?php echo htmlspecialchars($searchterm, ENT_QUOTES, "UTF-8"); ?>">
 		</form>
