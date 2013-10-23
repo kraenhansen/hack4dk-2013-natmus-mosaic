@@ -70,6 +70,7 @@ function printImages($maxreturned = 10, $startindex = 0) {
 		<title>Hack4DK 2013 - Natmus Mosaic</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 		<style>
 		@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 		body {
@@ -114,21 +115,27 @@ function printImages($maxreturned = 10, $startindex = 0) {
 		
 		form#search input {
 			position: absolute;
-			font-size: 25px;
-			border: 1px solid rgba(0, 0, 0, 0.6);
-			padding: 0.3em;
 			left: 33%;
 			right: 33%;
 			top: 1em;
-			border-radius: 0.2em; 
-			-moz-border-radius: 0.2em;
-			-webkit-border-radius: 0.2em;
 			text-transform: capitalize;
 			opacity: 0.8;
+			width: auto;
+			transition: all 0.1s;
+			-webkit-transition: all 0.1s; /* Safari */
+			transform: scale(0.98, 0.98);
+			-ms-transform: scale(0.98, 0.98); /* IE 9 */
+			-webkit-transform: scale(0.98, 0.98); /* Safari and Chrome */
 		}
 		
 		form#search input:focus {
 			opacity: 1.0;
+			-webkit-box-shadow: 0 0 8px rgba(0,0,0,.6);
+			box-shadow: 0 0 8px rgba(0,0,0,.6);
+			border: #000000;
+			transform: scale(1, 1);
+			-ms-transform: scale(1, 1); /* IE 9 */
+			-webkit-transform: scale(1, 1); /* Safari and Chrome */
 		}
 		
 		.tile {
@@ -280,7 +287,7 @@ function printImages($maxreturned = 10, $startindex = 0) {
 	<body>
 		<h1><a href="http://hack4dk.wordpress.com/" target="_blank">#HACK4DK</a> - <a href="https://docs.google.com/presentation/d/1e77aApiTgVeWFSJJQp1f6lBk53mchY8LhLQ6pa1CWeM/view" target="_blank">Natmus Mosaic</a></h1>
 		<form id="search">
-			<input type="text" placeholder="Søg" name="q" autocomplete="off" value="<?php echo htmlspecialchars($searchterm, ENT_QUOTES, "UTF-8"); ?>">
+			<input type="text" class="form-control input-lg" placeholder="Søg" name="q" autocomplete="off" value="<?php echo htmlspecialchars($searchterm, ENT_QUOTES, "UTF-8"); ?>">
 		</form>
 		<?php printImages(200) ?>
 	</body>
