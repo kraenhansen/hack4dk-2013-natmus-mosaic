@@ -67,10 +67,15 @@ function printImages($maxreturned = 10, $startindex = 0) {
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hack4DK 2013 - Natmus Mosaic</title>
+		<title>Hack4DK 2013 - Natmus Mosaic by Kræn Hansen</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<meta property="og:image" content="http://hack4dk-2013.kraenhansen.dk/logo-white.png"/>
+		<meta property="og:title" content="Hack4DK 2013 - Natmus Mosaic by Kræn Hansen"/>
+		<meta property="og:url" content="http://hack4dk-2013.kraenhansen.dk/"/>
+		<meta property="og:site_name" content="Kræn Hansen's Natmus Mosaic"/>
+		<meta property="og:type" content="blog"/>
 		<style>
 		@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 		body {
